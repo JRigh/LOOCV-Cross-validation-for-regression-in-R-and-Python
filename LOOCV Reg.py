@@ -3,6 +3,10 @@
 # in Python
 #-------------------------------------------------------------
 
+#--------------------------------------------------
+# Example 1: Linear and Quadratic regression models
+#--------------------------------------------------
+
 # 1. generate artificial data
 import numpy as np
 np.random.seed(2023)
@@ -79,6 +83,24 @@ RMSE2 = math.sqrt(statistics.mean(abs(scoresmod2)))
 # [16.169293289892607, 7.873829105930071]
 # The second model (Quadratic) has the lowest RMSE and thus is prefered.
 
-#----
-# end
-#----
+#---------------------------------------
+# Example 2: binomial regressions models
+#---------------------------------------
+
+# importing the data from .csv file
+
+training = pd.read_csv("C:/Users/julia/OneDrive/Desktop/github/16. Crossvalidation/mtcars_training.csv")
+testing = pd.read_csv("C:/Users/julia/OneDrive/Desktop/github/16. Crossvalidation/mtcars_testing.csv")
+testing
+
+# 2. Cross-Validation
+# fit the models on leave-one-out samples
+from sklearn.linear_model import LogisticRegression
+
+# logistic model
+modl = LogisticRegression(random_state=0).fit_transform(training['mpg'])
+modl1 = LogisticRegression.fit(mod1, training['vs'])
+  
+#-----------
+# unfinished
+#-----------
