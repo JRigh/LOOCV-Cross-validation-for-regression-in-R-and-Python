@@ -32,14 +32,6 @@ scoresmod1 = cross_val_score(mod11,
                          cv = loocv1)
 ```
 
-Then using R, we compare the fit among three models for binary data on a real dataset, 'mtcars'. We try to predict the binary variable 'vs' which 
-correspond to the engine type using 'mpg' or miles per gallon. We find that the Probit model minimizes the RMSE compared to a Logistic model and a Complementary
-Log-log model. A graph is then generated using the library ggplot2.
-
-![Rplot2](/assets/Rplot2.png)
-
-The Python script for the second example is for now unfinished.
-
 Same example but with R code this time.
 
 ```r
@@ -57,4 +49,10 @@ for(i in 1:n) {
 }
 ```
 
-Enjoy the content.
+Then using R, we compare the fit among three models for binary data on a real dataset, 'mtcars'. We try to predict the binary variable 'vs' which 
+correspond to the engine type using 'mpg' or miles per gallon. We find that the Probit model minimizes the RMSE compared to a Logistic model and a Complementary
+Log-log model. A graph is then generated using the library ggplot2.
+
+![Rplot2](/assets/Rplot2.png)
+
+The Python script for the second example is for now unfinished.
